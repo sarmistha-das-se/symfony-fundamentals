@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ parent() }} Starshop{% endblock %}
+{% block body %}
+<strong> Starshop twig template</strong>
+<div>
+  {{ numberOfStarShips }}
+  {% if numberOfStarShips > 400 %}
+
+    <p>More than 400 starshop </p>
+
+  {% endif %}
+
+</div>
+
+<div>
+  <h1>My ships</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>{{ myship['name'] }}</td>
+      <td>{{ myship['class'] }}</td>
+      <td>{{ myship['status'] }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
